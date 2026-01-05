@@ -292,9 +292,13 @@ coverage.plt <- ggarrange(ave.kba.plt, ave.sp.plt,
                           labels = c("A.", "B.", "C.", "D."),
                           heights = c(1, 2), align = "hv")
 
-ggsave(path = "Outputs/draft_figs", coverage.plt, 
-       filename = "Coverage_plot.png",  bg = "white",
+ggsave(path = "Outputs/Final.Figures", coverage.plt, 
+       filename = "Fig1.Coverage_plot.png",  bg = "white",
        device = "png", width = 18, height = 14, units = "cm")
+
+ggsave(path = "Outputs/Final.Figures", coverage.plt, 
+       filename = "Fig1.Coverage_plot.pdf",  bg = "white",
+       device = "pdf", width = 18, height = 14, units = "cm")
 
 hist(as.numeric(as.character(KBA_AOH_sum_fix$perc_inKBA)))
 ## got the prop traded species per kba
